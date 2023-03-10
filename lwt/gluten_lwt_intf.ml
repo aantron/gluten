@@ -47,6 +47,8 @@ module type IO = sig
 end
 
 module type Server = sig
+  module Gluten = Dream_gluten.Gluten
+
   type socket
   type addr
 
@@ -69,6 +71,8 @@ module type Server = sig
 end
 
 module type Client = sig
+  module Gluten = Dream_gluten.Gluten
+
   type t
   type socket
 
